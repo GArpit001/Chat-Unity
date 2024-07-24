@@ -1,0 +1,108 @@
+
+
+body , .App{
+  background: url(./assets/img/background.png);
+  background-repeat: no-repeat;
+  background-size:  cover;
+  background-position: center;
+  height: 100vh;
+  /* height:100vh ; */
+  /* background-size: ; */
+
+}
+
+
+
+.dropbtn {
+  /* background-color: #4CAF50; */
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border : 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  right: -16px;
+
+
+}
+
+.dropdown-content li{
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+.borderImg{
+  border: 1px solid black;
+}
+
+/* .scrollBarEdit{
+  ::-webkit-scrollbar-track{
+
+    width: 200px;
+
+  }
+
+
+  ::-webkit-scrollbar{
+    border-radius: 15px;
+  }
+} */
+
+/* .scrollBarEdit ::-webkit-scrollbar-thumb{
+  border-radius: 15px;
+
+} */
+
+.scrollBarEdit::-webkit-scrollbar {
+  width: 5px;
+}
+
+.scrollBarEdit::-webkit-scrollbar-track {
+  border-radius: 20px;
+  background: white; 
+
+}
+
+ 
+.scrollBarEdit::-webkit-scrollbar-thumb {
+  background: white; 
+  border-radius: 10px;
+}
+
+
+
+
+.scrolls{
+  overflow-y: scroll;
+  /* transform: rotate(-180deg); */
+}
+
+.scrolls-inner{
+  transform: rotate(0deg);  
+}
+
+
