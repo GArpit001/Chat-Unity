@@ -18,7 +18,7 @@ import UserList from '../Avtar/UserList'
 
 const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain, fetchAllMessage }) => {
 
-   const BASEURL = "https://chat-unity-backend.onrender.com"
+   const BASEURL = "https://backend-chat-unity.onrender.com"
 
 
     const [groupChatName, setGroupChatName] = useState()

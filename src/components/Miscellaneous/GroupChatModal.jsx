@@ -20,7 +20,7 @@ import UserBadgeItem from './UserBadgeItem'
 
 const GroupChatModal = ({ children }) => {
 
- const BASEURL = "https://chat-unity-backend.onrender.com"
+ const BASEURL = "https://backend-chat-unity.onrender.com"
 
 
     const allStates = useContext(myContext)

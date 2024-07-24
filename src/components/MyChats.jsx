@@ -8,7 +8,7 @@ import GroupChatModal from './Miscellaneous/GroupChatModal';
 
 const MyChats = ({ fetchAgain }) => {
 
-   const BASEURL = "https://chat-unity-backend.onrender.com"
+   const BASEURL = "https://backend-chat-unity.onrender.com"
 
 
   const allStates = useContext(myContext)

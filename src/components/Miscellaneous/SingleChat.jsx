@@ -13,12 +13,12 @@ import io from "socket.io-client"
 // import Lottie from 'lottie-react'
 
 
-const ENDPOINT = "https://we-chat-backend-83tk.onrender.com"
+const ENDPOINT = "https://backend-chat-unity.onrender.com"
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
 
-     const BASEURL = "https://chat-unity-backend.onrender.com"
+     const BASEURL = "https://backend-chat-unity.onrender.com"
 
 
     const [message, setMessage] = useState([])
