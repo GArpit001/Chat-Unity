@@ -23,6 +23,8 @@ import {
     useToast
 } from '@chakra-ui/react'
 import UserList from '../Avtar/UserList'
+import NotificationBadge from "react-notification-badge";
+import { Effect } from "react-notification-badge";
 
 const SideDrawer = (props) => {
 
@@ -196,10 +198,10 @@ const SideDrawer = (props) => {
                     <div className="bell dropdown">
 
                         <button className='dropbtn text-black border-0'>
-                            {/* <NotificationBadge
+                            <NotificationBadge
                                 count={notification.length}
                                 effect={Effect.SCALE}
-                            /> */}
+                            />
                             <i className="fa-solid fa-bell pr-5 text-[20px] "></i>
                         </button>
 
