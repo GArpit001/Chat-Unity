@@ -5,7 +5,7 @@ import { getSender, getSenderFull } from '../../config/ChatLogic'
 import Modal from './Modal'
 import UpdateGroupChatModal from './UpdateGroupChatModal'
 import ScrollableChat from './ScrollableChat'
-import Lottie from 'react-lottie'
+// import Lottie from 'react-lottie'
 import animationData from "../../animations/typing.json"
 import "../../App.css"
 

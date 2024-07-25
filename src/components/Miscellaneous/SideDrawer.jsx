@@ -198,10 +198,10 @@ const SideDrawer = (props) => {
                     <div className="bell dropdown">
 
                         <button className='dropbtn text-black border-0'>
-                            <NotificationBadge
+                            {/* <NotificationBadge
                                 count={notification.length}
                                 effect={Effect.SCALE}
-                            />
+                            /> */}
                             <i className="fa-solid fa-bell pr-5 text-[20px] "></i>
                         </button>
 
