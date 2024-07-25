@@ -23,8 +23,8 @@ import {
     useToast
 } from '@chakra-ui/react'
 import UserList from '../Avtar/UserList'
-import NotificationBadge from "react-notification-badge";
-import { Effect } from "react-notification-badge";
+// import NotificationBadge from "react-notification-badge";
+// import { Effect } from "react-notification-badge";
 
 const SideDrawer = (props) => {
 
