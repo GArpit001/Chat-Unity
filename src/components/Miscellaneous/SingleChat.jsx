@@ -12,8 +12,9 @@ import "../../App.css"
 import io from "socket.io-client"
 
 
-// const ENDPOINT = "https://backend-chat-unity.onrender.com"
-const ENDPOINT = "http://localhost:5000"
+const ENDPOINT = "https://backend-chat-unity.onrender.com"
+// const ENDPOINT = "http://localhost:5000"
+
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
