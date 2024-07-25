@@ -27,7 +27,7 @@ import UserList from '../Avtar/UserList'
 const SideDrawer = (props) => {
 
 // const BASEURL = "http://localhost:5000"
-     const BASEURL = "https://backend-chat-unity.onrender.com"
+    //  const BASEURL = "https://backend-chat-unity.onrender.com"
 
 
     const [search, setSearch] = useState("")
@@ -74,7 +74,7 @@ const SideDrawer = (props) => {
         try {
             setLoading(true)
 
-            const data = await fetch(`${BASEURL}/api/auth/allUsers?search=${search}`, {
+            const data = await fetch(`http://localhost:5000/api/auth/allUsers?search=${search}`, {
                 method: "GET",
                 headers: {
                     "auth-token": `${JSON.parse(localStorage.getItem("userInfo")).token}`
@@ -109,7 +109,7 @@ const SideDrawer = (props) => {
         try {
             setLoadingChat(true)
 
-            const data = await fetch(`${BASEURL}/api/chat/createChat`, {
+            const data = await fetch(`http://localhost:5000/api/chat/createChat`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
