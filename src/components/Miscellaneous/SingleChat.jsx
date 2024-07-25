@@ -10,14 +10,15 @@ import animationData from "../../animations/typing.json"
 import "../../App.css"
 
 import io from "socket.io-client"
-// import Lottie from 'lottie-react'
 
 
-const ENDPOINT = "https://backend-chat-unity.onrender.com"
+// const ENDPOINT = "https://backend-chat-unity.onrender.com"
+const ENDPOINT = "http://localhost:5000"
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
-
+    
+    // const BASEURL = "http://localhost:5000"
      const BASEURL = "https://backend-chat-unity.onrender.com"
 
 
@@ -65,7 +66,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
             const data = await fetch(`${BASEURL}/api/message/${selectChat._id}`, {
                 method: "GET",
                 headers: {
-                    // "Content-Type": "application/json",
+                    "Content-Type": "application/json",
                     "auth-token": JSON.parse(localStorage.getItem("userInfo")).token
                 }
             })
