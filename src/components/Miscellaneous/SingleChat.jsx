@@ -18,7 +18,7 @@ const ENDPOINT = "http://localhost:5000"
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
-    
+
     // const BASEURL = "http://localhost:5000"
     //  const BASEURL = "https://backend-chat-unity.onrender.com"
 
@@ -317,10 +317,9 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
 
                                     <div className=' flex flex-col w-full' onKeyDown={sendMessage}>
 
-                                        {isTyping ? <div> <Lottie options={defaultOptions}
-                                            // height={50}
-                                            width={50}
-                                            style={{ marginBottom: 5, marginTop: 10, marginLeft: 0 }} />  </div> : <></>}
+                                        {isTyping ? <div>
+                                            Loading
+                                        </div> : <></>}
 
                                         <input type="text" className='w-full rounded-lg mt-2 bg-slate-200' placeholder='Enter the message...' value={newMessage} onChange={typingHandler} />
                                     </div>
