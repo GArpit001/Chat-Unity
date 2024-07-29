@@ -9,6 +9,7 @@ import ScrollableChat from './ScrollableChat'
 import animationData from "../../animations/typing.json"
 import "../../App.css"
 
+
 import io from "socket.io-client"
 
 
