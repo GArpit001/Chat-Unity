@@ -12,7 +12,7 @@ import Load from '../Miscellaneous/Load'
 const Signup = (props) => {
 
   // const BASEURL = "http://localhost:5000"
-  //  const BASEURL = "https://backend-chat-unity.onrender.com"
+   const BASEURL = "https://backend-chat-unity.onrender.com"
 
 
   const {
@@ -142,7 +142,7 @@ const Signup = (props) => {
 
     try {
 
-      const responce = await fetch(`http://localhost:5000/api/auth/createUser`, {
+      const responce = await fetch(`https://backend-chat-unity.onrender.com/api/auth/createUser`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

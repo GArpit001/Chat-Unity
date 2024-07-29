@@ -24,7 +24,7 @@ const MyChats = ({ fetchAgain }) => {
     try {
       // console.log(user._id)
 
-      const data = await fetch(`http://localhost:5000/api/chat/fetchChat`, {
+      const data = await fetch(`https://backend-chat-unity.onrender.com/api/chat/fetchChat`, {
         method: "GET",
         headers: {
           "auth-token": `${JSON.parse(localStorage.getItem("userInfo")).token}`
