@@ -69,7 +69,7 @@ const Login = (props) => {
 
         try {
 
-            const responce = await fetch(`https://backend-chat-unity.onrender.com/api/auth/login`, {
+            const responce = await fetch(`http://localhost:5000/api/auth/login`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

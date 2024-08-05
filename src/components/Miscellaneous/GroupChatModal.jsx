@@ -71,7 +71,7 @@ const GroupChatModal = ({ children }) => {
 
             setLoading(true)
 
-            const data = await fetch(`https://backend-chat-unity.onrender.com/api/auth/allUsers?search=${search}`, {
+            const data = await fetch(`http://localhost:5000/api/auth/allUsers?search=${search}`, {
                 method: "GET",
                 headers: {
                     "auth-token": JSON.parse(localStorage.getItem("userInfo")).token

@@ -65,7 +65,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         try {
             setLoading(true)
 
-            const data = await fetch(`https://backend-chat-unity.onrender.com/api/message/${selectChat._id}`, {
+            const data = await fetch(`http://localhost:5000/api/message/${selectChat._id}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -108,7 +108,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         if (event.key === "Enter" && newMessage) {
             socket.emit("stop typing", selectChat._id)
             try {
-                const data = await fetch(`https://backend-chat-unity.onrender.com/api/message/`, {
+                const data = await fetch(`http://localhost:5000/api/message/`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -144,7 +144,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
 
 
     useEffect(() => {
-        socket = io.connect(ENDPOINT);
+        socket = io(ENDPOINT);
         socket.emit("setup", JSON.parse(localStorage.getItem("userInfo")));
         socket.on("connected", () => setSocketConnected(true));
         socket.on("typing", () => setIsTyping(true))
