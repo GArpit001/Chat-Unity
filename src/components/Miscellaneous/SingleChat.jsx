@@ -8,6 +8,7 @@ import ScrollableChat from './ScrollableChat'
 // import Lottie from 'react-lottie'
 import animationData from "../../animations/typing.json"
 import "../../App.css"
+import Loading from '../Loaing/Loading'
 
 
 import io from "socket.io-client"
@@ -21,7 +22,7 @@ var socket, selectedChatCompare;
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
 
     // const BASEURL = "http://localhost:5000"
-     const BASEURL = "https://backend-chat-unity.onrender.com"
+    const BASEURL = "https://backend-chat-unity.onrender.com"
 
 
     const [message, setMessage] = useState([])
@@ -319,7 +320,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                                     <div className=' flex flex-col w-full' onKeyDown={sendMessage}>
 
                                         {isTyping ? <div>
-                                            Loading
+                                            <Loading />
                                         </div> : <></>}
 
                                         <input type="text" className='w-full rounded-lg mt-2 bg-slate-200' placeholder='Enter the message...' value={newMessage} onChange={typingHandler} />
