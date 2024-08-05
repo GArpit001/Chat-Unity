@@ -20,9 +20,9 @@ import UserBadgeItem from './UserBadgeItem'
 
 const GroupChatModal = ({ children }) => {
 
-    
+
     // const BASEURL = "http://localhost:5000"
-//  const BASEURL = "https://backend-chat-unity.onrender.com"
+    const BASEURL = "https://backend-chat-unity.onrender.com"
 
 
     const allStates = useContext(myContext)
@@ -71,7 +71,7 @@ const GroupChatModal = ({ children }) => {
 
             setLoading(true)
 
-            const data = await fetch(`http://localhost:5000/api/auth/allUsers?search=${search}`, {
+            const data = await fetch(`${BASEURL}/api/auth/allUsers?search=${search}`, {
                 method: "GET",
                 headers: {
                     "auth-token": JSON.parse(localStorage.getItem("userInfo")).token
@@ -146,7 +146,7 @@ const GroupChatModal = ({ children }) => {
 
         try {
 
-            const data = await fetch(`http://localhost:5000/api/chat/group`, {
+            const data = await fetch(`${BASEURL}/api/chat/group`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

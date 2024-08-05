@@ -142,7 +142,7 @@ const Signup = (props) => {
 
     try {
 
-      const responce = await fetch(`http://localhost:5000/api/auth/createUser`, {
+      const responce = await fetch(`${BASEURL}/api/auth/createUser`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

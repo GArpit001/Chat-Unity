@@ -13,15 +13,15 @@ import "../../App.css"
 import io from "socket.io-client"
 
 
-// const ENDPOINT = "https://backend-chat-unity.onrender.com"
-const ENDPOINT = "http://localhost:5000"
+const ENDPOINT = "https://backend-chat-unity.onrender.com"
+// const ENDPOINT = "http://localhost:5000"
 
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
 
     // const BASEURL = "http://localhost:5000"
-    //  const BASEURL = "https://backend-chat-unity.onrender.com"
+     const BASEURL = "https://backend-chat-unity.onrender.com"
 
 
     const [message, setMessage] = useState([])
@@ -65,7 +65,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         try {
             setLoading(true)
 
-            const data = await fetch(`http://localhost:5000/api/message/${selectChat._id}`, {
+            const data = await fetch(`${BASEURL}/api/message/${selectChat._id}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -108,7 +108,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         if (event.key === "Enter" && newMessage) {
             socket.emit("stop typing", selectChat._id)
             try {
-                const data = await fetch(`http://localhost:5000/api/message/`, {
+                const data = await fetch(`${BASEURL}/api/message/`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",

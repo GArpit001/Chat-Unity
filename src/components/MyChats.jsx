@@ -8,7 +8,7 @@ import GroupChatModal from './Miscellaneous/GroupChatModal';
 
 const MyChats = ({ fetchAgain }) => {
 
-  //  const BASEURL = "https://backend-chat-unity.onrender.com"
+   const BASEURL = "https://backend-chat-unity.onrender.com"
   //  const BASEURL = "http://localhost:5000"
 
 
@@ -24,7 +24,7 @@ const MyChats = ({ fetchAgain }) => {
     try {
       // console.log(user._id)
 
-      const data = await fetch(`http://localhost:5000/api/chat/fetchChat`, {
+      const data = await fetch(`${BASEURL}/api/chat/fetchChat`, {
         method: "GET",
         headers: {
           "auth-token": `${JSON.parse(localStorage.getItem("userInfo")).token}`

@@ -18,7 +18,7 @@ import UserList from '../Avtar/UserList'
 
 const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain, fetchAllMessage }) => {
 
-//    const BASEURL = "https://backend-chat-unity.onrender.com"
+   const BASEURL = "https://backend-chat-unity.onrender.com"
 //    const BASEURL = "http://localhost:5000"
 
 
@@ -75,7 +75,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain, fetchAllMessage }) =>
 
             setLoading(true)
 
-            const data = await fetch(`http://localhost:5000/api/chat/addFromGroup`, {
+            const data = await fetch(`${BASEURL}/api/chat/addFromGroup`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -119,7 +119,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain, fetchAllMessage }) =>
 
             console.log(selectChat._id, groupChatName)
 
-            const data = await fetch(`http://localhost:5000/api/chat/groupRename`, {
+            const data = await fetch(`${BASEURL}/api/chat/groupRename`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -166,7 +166,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain, fetchAllMessage }) =>
 
             setLoading(true)
 
-            const data = await fetch(`http://localhost:5000/api/auth/allUsers?search=${search}`, {
+            const data = await fetch(`${BASEURL}/api/auth/allUsers?search=${search}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -218,7 +218,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain, fetchAllMessage }) =>
         try {
             setLoading(true);
 
-            const data = await fetch(`http://localhost:5000/api/chat/removeFromGroup`, {
+            const data = await fetch(`${BASEURL}/api/chat/removeFromGroup`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
